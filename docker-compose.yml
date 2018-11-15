@@ -1,0 +1,16 @@
+version: "3"
+  
+services:
+  alpine:
+    build:
+      context: ./docker/alpine
+    image: alpine-sshd
+    ports:
+      - "2222:22"
+
+  ubuntu:
+    build:
+      context: ./docker/ubuntu
+    image: ubuntu-sshd
+    ports:
+      - "4444:22"
